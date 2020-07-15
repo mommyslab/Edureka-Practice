@@ -1,0 +1,499 @@
+
+Optional: Maven: https://maven.apache.org/download.cgi
+https://www.mkyong.com/maven/how-to-install-maven-in-windows/
+Important JDK-8 : https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+Set Path of JAVA_HOME
+https://docs.oracle.com/cd/E19182-01/820-7851/inst_cli_jdk_javahome_t/
+Download Maven: https://maven.apache.org/download.cgi
+Extract Maven
+Set Path of Maven
+
+IDE--> Eclipse/Netbeans/SpringToolSuite/Intellij Idea(Community/Ultimate Edition)
+--Installation ends--
+Do above steps before proceeding:
+
+https://docs.spring.io/spring-boot/docs/2.2.2.RELEASE/reference/htmlsingle/
+SpringBoot--> https://start.spring.io/
+Maven:
+mvn clean
+mvn install
+mvn package
+mvn clean install -DskipTests
+mvnw clean install -DskipTests
+java -jar orderms.jar --server.port=8082
+java -jar orderms.jar --server.port=8083
+mvn spring-boot:run
+mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=8083
+
+Zuul:
+https://cloud.spring.io/spring-cloud-netflix/multi/multi__router_and_filter_zuul.html
+
+Microservice certification:
+https://www.redhat.com/en/services/certification/red-hat-certified-enterprise-microservices-developer
+
+spring boot tutorial: https://spring.io/guides/gs/spring-boot/
+spring data jpa: https://spring.io/guides/gs/accessing-data-jpa/
+spring data jpa with mysql:
+https://spring.io/guides/gs/accessing-data-mysql/
+spring data rest:
+https://spring.io/guides/gs/accessing-data-rest/
+https://docs.spring.io/spring-data/rest/docs/current/reference/html/#reference
+https://docs.spring.io/spring-data/rest/docs/current/reference/html/#customizing-sdr
+@RepositoryRestController 
+
+Cache: https://www.baeldung.com/spring-boot-ehcache
+
+Dropwizard: https://www.dropwizard.io/en/stable/
+logback file: https://www.baeldung.com/spring-boot-logging
+
+swagger code-generation: https://swagger.io/tools/swagger-codegen/
+http://localhost:8082/swagger-ui.html
+<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>3.0.0-SNAPSHOT</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>3.0.0-SNAPSHOT</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.springfox/springfox-data-rest -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-data-rest</artifactId>
+			<version>3.0.0-SNAPSHOT</version>
+		</dependency>
+
+<repositories>
+		<repository>
+			<id>jcenter-snapshots</id>
+			<name>jcenter</name>
+			<url>http://oss.jfrog.org/artifactory/oss-snapshot-local/</url>
+		</repository>
+	</repositories>
+	-------------------------
+	
+	<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>3.0.0-20190808.104142-39</version>
+			</dependency>
+			<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-data-rest</artifactId>
+			<version>3.0.0-20190808.104142-39</version>
+			</dependency>
+			<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-spring-web</artifactId>
+			 <version>3.0.0-20190808.104142-38</version>
+			<!-- <version>3.0.0-20190808.104142-39</version> -->
+			</dependency>
+			<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-schema</artifactId>
+			<version>3.0.0-20190808.104142-39</version>
+			</dependency>
+			
+	<repositories>
+		<repository>
+			<id>jcenter-snapshots</id>
+			<name>jcenter</name>
+			<url>http://oss.jfrog.org/artifactory/oss-snapshot-local/</url>
+		</repository>
+	</repositories>
+	-------------------------
+spring.profiles.active=dev,messaging
+H2#
+console: http://localhost:8080/h2-console
+jdbc:h2:mem:testdb
+username: sa
+password: empty (means no password)
+--------------orderms-data-----------------------
+insert into order_data (order_name, user_id, nick_name) values ('iPhone-X', 1, 'Apple-Phone-X');
+insert into order_data (order_name, user_id, nick_name) values ('iPhone-Normal', 1, 'Apple-Phone');
+insert into order_data (order_name, user_id, nick_name) values ('Nexus-7', 2, 'Google-7');
+insert into order_data (order_name, user_id, nick_name) values ('Nexus-6', 2, 'Google-6');
+insert into order_data (order_name, user_id, nick_name) values ('Blackberry', 2, 'BB');
+insert into order_data (order_name, user_id, nick_name) values ('BlueBerry', 1, 'BB');
+insert into order_data (order_name, user_id, nick_name) values ('BrownBerry', 1, 'BB');
+
+--------------------------------------------------
+
+# application.properties
+https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+
+
+HTTP Methods:
+GET: Yes == Idempotent + Safe
+POST: No == Non-Idempotent + Not-Safe
+DELETE: No/Yes == Idempotent + Not-Safe
+PUT: No/Yes == Idempotent + Not-Safe
+PATCH: No == Non-Idempotent + Not-Safe
+
+Exceptin Handling:
+https://www.baeldung.com/exception-handling-for-rest-with-spring
+spring-security:
+https://spring.io/guides/gs/securing-web/
+https://www.baeldung.com/spring-security-method-security
+
+swagger-ui: http://localhost:8082/swagger-ui.html
+
+Eureka:
+http://localhost:8761/
+
+HATEOAS--> API Maturity Level
+HATEOAS (Hypertext As The Engine Of Application State)
+https://martinfowler.com/articles/richardsonMaturityModel.html
+
+Domain Driven Design:
+https://www.amazon.in/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215
+
+Implementing DDD:
+https://www.amazon.in/Implementing-Domain-Driven-Design-Vernon/dp/9332545480?tag=googinhydr18418-21&tag=googinkenshoo-21&ascsubtag=_k_CjwKCAjwvbLkBRBbEiwAChbckRXXF_hou6s4hYWBxio_AgLBgdgotwtsjaZy7OmJP7BqUz4xfduNHhoCKYgQAvD_BwE_k_&gclid=CjwKCAjwvbLkBRBbEiwAChbckRXXF_hou6s4hYWBxio_AgLBgdgotwtsjaZy7OmJP7BqUz4xfduNHhoCKYgQAvD_BwE
+
+Microservice Book:
+https://www.amazon.in/Building-Microservices-Designing-Fine-Grained-Systems-ebook/dp/B00T3N7XB4
+
+Richardson Maturity Model:
+https://martinfowler.com/articles/richardsonMaturityModel.html
+
+Saga Pattern:
+https://microservices.io/patterns/data/saga.html
+
+Domain Driven Design:
+
+https://www.amazon.in/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215
+
+https://www.amazon.in/dp/B00BCLEBN8/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1
+
+Netflix OSS:
+https://github.com/Netflix/eureka
+
+#Actuator Doc:
+https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-features.html
+
+#Actuator
+management.endpoints.web.exposure.include=*
+management.endpoint.web.exposure.exclude=beans
+
+#/actuator/beans
+endpoints.beans.id=springbeans
+endpoints.beans.sensitive=false
+endpoints.beans.enabled=true
+
+#/actuator/info
+info.app.name=Actuator-App
+info.app.description=My Edureka App
+info.app.version=1.2.3
+
+
+Lombok:
+Eclipse:
+1. download jar file of lombok-x.x.xx.jar
+
+2. java -jar lombok-x.x.xx.jar
+opens pop up
+3. In pop-up --> specify location of eclipse.exe
+
+Intellij Idea:
+Idea--> Plugins --> Repository --> Lombok --> Install--> Restart
+
+Cucumber:
+Edlipse: https://marketplace.eclipse.org/content/cucumber-eclipse-plugin
+Intellij Idea: 
+Idea--> Plugins --> Repository --> Cucumber(also installs Gherkin) --> Install--> Restart
+
+-----------Docker starts-------------------
+docker:
+install Docker on windows machine:
+https://docs.docker.com/toolbox/toolbox_install_windows/
+https://docs.docker.com/install/linux/docker-ce/ubuntu/
+https://docs.docker.com/engine/reference/commandline/tag/
+
+Docker toolbox error:
+"this computer doesn't have VT-X/AMD-v enabled. enabling it in BIOS is mandatory"
+In case virtualization is already enabled (check in TaskManager Performance Tab)
+
+replace below line with flag "--virtualbox-no-vtx-check" in C:\Program Files\Docker Toolbox\start.sh
+echo "Misbah script"
+  #"${DOCKER_MACHINE}" create -d virtualbox $PROXY_ENV "${VM}"
+  "${DOCKER_MACHINE}" create -d virtualbox --virtualbox-no-vtx-check $PROXY_ENV "${VM}"
+
+
+pom.xml
+cd <directory to your microservices>
+add dockerfile
+add docker plugin to pom.xml file
+
+properties: <docker.image.prefix>edureka</docker.image.prefix>
+<plugin>
+	<groupId>com.spotify</groupId>
+	<artifactId>dockerfile-maven-plugin</artifactId>
+	<version>1.4.9</version>
+	<configuration>
+		<repository>${docker.image.prefix}/${project.artifactId}</repository>
+		<buildArgs>
+			<JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
+		</buildArgs>
+	</configuration>
+</plugin>
+
+dockerfile:
+FROM openjdk:8-jdk-alpine
+VOLUME /tmp
+ARG JAR_FILE
+COPY ${JAR_FILE} app.jar
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
+
+implicitly this is what Docker runs(Entrypoint): java -jar app.jar
+----------- copy orderms files to AWS-----
+scp -i "<your-key-pair>" -r /f/Edureka_Batches/28-Dec-2019_19-Jan-2020/orderms ec2-user@ec2-13-233-225-237.ap-south-1.compute.amazonaws.com:/home/ec2-user
+sudo yum install java-1.8.0-openjdk-devel
+yum install docker -y
+service docker start
+
+./mvnw install dockerfile:build
+
+docker images
+docker run -p 8080:8082 -t <docker-image>
+docker run -p 8080:8082 -t cbb5e63bcc7b
+
+--------------ubuntu:
+ssh -i first_key_pair.pem ubuntu@18.212.3.211
+
+update package manager:
+sudo apt-get update
+
+sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg-agent \
+    software-properties-common
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+//optional to make sure above certificate is correct
+sudo apt-key fingerprint 0EBFCD88
+
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+
+sudo apt-get update
+
+install docker (above steps are required):
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+docker --version
+--------------ubuntu ends
+in browser:
+add a new/signin account: https://cloud.docker.com
+
+Laptop:
+docker login --username=<username>
+docker tag <image-id> <dockerhub-repo>:<anynameofyourchoice>
+docker tag cbb5e63bcc7b hamdijaw/edureka:userms_02_Nov_19
+
+docker push hamdijaw/edureka:userms_02_Nov_19
+
+docker pull hamdijaw/edureka:userms_02_Nov_19
+docker run -p 8080:8081 -t <docker-image>
+docker run -p 8080:8081 -t cbb5e63bcc7b
+-------------Docker ends-----------------
+ActiveMQ:
+Download: http://activemq.apache.org/activemq-5155-release.html
+Windows Distribution apache-activemq-5.15.5-bin.zip
+
+Extract to a local folder: F:\software\apache-activemq-5.15.5
+
+F:\software\apache-activemq-5.15.5\bin>activemq start
+
+http://127.0.0.1:8161/admin
+username: admin
+password: admin
+
+commandms:
+server.port=8085
+spring.activemq.broker-url=tcp://localhost:61616
+spring.activemq.in-memory=false
+
+-----------security starts------------
+spring security basics:
+https://www.baeldung.com/spring-security-expressions-basic
+https://docs.spring.io/spring-security-oauth2-boot/docs/current/reference/htmlsingle/
+
+oAuth2:
+curl -X POST -d grant_type=client_credentials http://candy:123@localhost:9000/oauth/token
+From userms to oauth2 server:
+curl -X POST -d grant_type=client_credentials http://candy:123@oauth-server/oauth/token
+
+ curl localhost:8080/dummy-userms/users -H "Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJyZWFkIiwid3JpdGUiLCJhZG1pbiJdLCJleHAiOjE1Nzg4NDY0MDEsImp0aSI6IjkzYmQyMzIwLWE3ODQtNGNmNC1iYWU2LWYyYjc1ZWMwYzMxZiIsImNsaWVudF9pZCI6ImNhbmR5In0.fPNYr1cKLeodm_5G6PaGhF0RlVC5kPZqANFO92IAoOU"
+
+{"access_token":"3999755e-e987-4a8b-8666-d109ce0261f3","token_type":"bearer","expires_in":38,"scope":"read write"}
+
+<dependency>
+	<groupId>org.springframework.security</groupId>
+	<artifactId>spring-security-jwt</artifactId>
+	<version>1.0.10.RELEASE</version>
+</dependency>
+
+-----------security ends------------
+
+AWS Signup:
+https://aws.amazon.com/console/
+aws.amazon.com/free
+
+AWS Regions & AZ:
+https://aws.amazon.com/about-aws/global-infrastructure/
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html
+
+AWS ssh:
+https://aws.amazon.com/free --> create your free account
+Mobaxterm: 
+https://mobaxterm.mobatek.net/download-home-edition.html
+Personal
+https://alestic.com/2014/01/ec2-ssh-username/
+
+ssh -i "<security-key>.pem" ec2-user@<public-ip-address>
+
+---------simpler one---------
+chmod 400 <your-key-pair>
+ssh -i "<your-key-pair>" 
+ec2-user@ec2-13-233-225-237.ap-south-1.compute.amazonaws.com
+sudo yum update -y
+sudo yum install docker -y
+sudo service docker start
+-------------------------
+sudo su
+yum install httpd -y
+echo "<html><h1>Hello Edureka</h1></html>" > /var/www/html/index.html
+ls -ltr /var/www/html/
+service httpd start
+
+Kubernetes:
+https://kubernetes.io/docs/tutorials/kubernetes-basics/
+
+++++++++++++++CONFIG-SERVER STARTS+++++++++++++++++
+Rabbitmq:
+https://www.rabbitmq.com/install-windows-manual.html
+https://www.rabbitmq.com/which-erlang.html
+
+Steps:
+1) install Erlang (otp_win64_22.1.exe)
+2) install RabbitMQ (rabbitmq-server-3.8.1.exe)
+3) cd C:\Program Files\RabbitMQ Server\rabbitmq_server-3.8.1\sbin
+4) rabbitmq-server.bat // should start rabbitmq server in win-console
+5) rabbitmq-plugins enable rabbitmq_management //should install management web page
+6) Check Management url of RabbitMQ in browser:
+http://localhost:15672/mgmt
+username: guest
+password: guest
+
+in case of issues do below cleanup:
+C:\Program Files\RabbitMQ Server\rabbitmq_server-3.8.1
+rabbitmq-service remove
+rabbitmq-service install
+rabbitmq-plugins enable rabbitmq_management
+rabbitmq-service start
+05-Apr-2020:
+rabbitmq-server.bat
+
+______________config-server dependencies:______________
+https://cloud.spring.io/spring-cloud-config/multi/multi__spring_cloud_config_server.html
+<dependency>
+	<groupId>org.springframework.cloud</groupId>
+	<artifactId>spring-cloud-config-monitor</artifactId>
+	<version>2.1.2.RELEASE</version>
+	<scope>runtime</scope>
+</dependency>
+<dependency>
+	<groupId>org.springframework.cloud</groupId>
+	<artifactId>spring-cloud-starter-stream-rabbit</artifactId>
+	<version>2.2.0.RELEASE</version>
+</dependency>
+config-server--> application.properties
+#Config server
+server.port=9999
+spring.application.name=config-server
+#Eureka config
+eureka.client.serviceUrl.defaultZone=http://localhost:8761/eureka
+
+spring.cloud.config.server.git.uri=https://github.com/misbaharchitect/hello_world.git
+spring.cloud.config.server.git.clone-on-start=true
+spring.cloud.bus.enabled=true
+
+#Rabbitmq
+spring.rabbitmq.host=localhost
+spring.rabbitmq.port=5672
+spring.rabbitmq.username=guest
+spring.rabbitmq.password=guest
+
+#Security
+security.user.name=root
+security.user.password=secret123
+______________config-client______________
+config-client dependency:
+<dependency>
+	<groupId>org.springframework.cloud</groupId>
+	<artifactId>spring-cloud-starter-bus-amqp</artifactId>
+	<version>2.1.1.RELEASE</version>
+</dependency>
+<dependency>
+	<groupId>org.springframework.cloud</groupId>
+	<artifactId>spring-cloud-starter-config</artifactId>
+</dependency>
+
+config-client(userms):
+#bootstrap.properties:
+#spring.cloud.config.uri=http://localhost:8888
+spring.cloud.config.discovery.serviceId=config-server
+spring.cloud.config.discovery.enabled=true
+spring.cloud.config.username=root
+spring.cloud.config.password=secret123
+
+application.properties:
+#For integration with config-server
+#Rabbitmq
+spring.rabbitmq.host=localhost
+spring.rabbitmq.port=5672
+spring.rabbitmq.username=guest
+spring.rabbitmq.password=guest
+
+#config-server default
+my-property=dummy
+your-property=dummy
+
+______________Webhook: github:______________
+curl -v -X POST "http://localhost:9999/monitor" \
+-H "Content-Type: application/json" \
+-H "X-Event-Key: repo:push" \
+-H "X-Hook-UUID: webhook-uuid" \
+-d '{"push": {"changes": []} }'
+
+http://localhost:8888/userms/dev
+http://localhost:8888/userms/global
+
+---------------CONFIG-SERVER ENDS----------------
+
+Eureka Highly Available Deployment Model:
+https://cloud.spring.io/spring-cloud-netflix/multi/multi_spring-cloud-eureka-server.html
+
+Chaos Monkey:
+https://github.com/search?q=org%3ANetflix+chaos&unscoped_q=chaos
+-----------------------------
+
+Pact Contract Test: https://docs.pact.io/
+
+Jenkins:
+https://jenkins.io/doc/pipeline/tour/getting-started/
+
+AWS Lambda:
+https://docs.aws.amazon.com/lambda/latest/dg/getting-started.html
+----------------------------------------------------------
+Hystrix:
+https://github.com/Netflix/Hystrix/wiki/Configuration
